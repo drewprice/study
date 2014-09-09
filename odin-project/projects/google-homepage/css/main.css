@@ -1,0 +1,92 @@
+body {
+	font-family: arial, sans-serif;
+	font-weight: 200;
+	font-size: 0.83em;
+}
+
+a {
+	color: #404040;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.navbar {
+	display: table;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+}
+
+ul {
+	display: table-cell;
+	text-align: right;
+	vertical-align: middle;
+}
+
+li {
+	display: inline-block;
+	margin: 0 7px 0 7px;
+}
+
+
+.sign-in {
+	color: #fff;
+	font-weight: 600;
+	margin-right: 16px;
+	background: #4285f4;
+	padding: 8px 12px 8px 12px;
+	border-radius: 2px;
+}
+
+.sign-in:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.apps {
+	height: 15px; width: 15px;
+	background: gray;
+	border-radius: 2px;
+}
+
+.apps:hover {
+	background: #000;
+	transform: rotate(45deg);
+}
+
+.dot {
+	background: #fff;
+	height: 15px; width: 15px;
+	position: absolute;
+	margin-top: 0px;
+	margin-left: 0px;
+	border-radius: 50%;
+}
+
+/* SEARCH CONTENT */
+
+.search {
+	height: 360px; width: 520px;
+	border: 1px dashed green;
+	margin-left: auto; margin-right: auto;
+}
+
+.logo {
+	position: absolute;
+	height: 180px; width: 180px;
+	margin: 0 0 0 170px;
+	border-radius: 10px;
+}
+
+.search-buttons {
+	font-weight: 400;
+	margin-right: 16px;
+	background: #fff;
+	padding: 8px 12px 8px 12px;
+	border-radius: 2px;
+	border: 1px solid #404040;
+}
