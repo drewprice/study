@@ -21,7 +21,7 @@ a:hover {
 	position: fixed;
 }
 
-ul {
+.navbar ul {
 	display: table-cell;
 	text-align: right;
 	vertical-align: middle;
@@ -44,22 +44,23 @@ li {
 
 .sign-in:hover {
 	color: #fff;
+	background: #3B78DC;
 	text-decoration: none;
 }
 
 .apps {
 	height: 15px; width: 15px;
-	background: gray;
+	background: #404040;
 	border-radius: 2px;
 }
 
 .apps:hover {
-	background: #000;
+	background: #333333;
 	transform: rotate(45deg);
 }
 
 .dot {
-	background: #fff;
+	background: #ECECEC;
 	height: 15px; width: 15px;
 	position: absolute;
 	margin-top: 0px;
@@ -67,26 +68,76 @@ li {
 	border-radius: 50%;
 }
 
+.dot:hover {
+	background: #D9D9D9;
+}
+
 /* SEARCH CONTENT */
 
 .search {
 	height: 360px; width: 520px;
-	border: 1px dashed green;
-	margin-left: auto; margin-right: auto;
+
+ 	position: fixed;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
 }
 
 .logo {
 	position: absolute;
-	height: 180px; width: 180px;
-	margin: 0 0 0 170px;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -25%);
 	border-radius: 10px;
 }
 
+.searchbar {
+ 	position: fixed;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+
 .search-buttons {
-	font-weight: 400;
+	font-weight: bold;
+	color: #404040;
 	margin-right: 16px;
-	background: #fff;
+	background: #f2f2f2;
 	padding: 8px 12px 8px 12px;
 	border-radius: 2px;
-	border: 1px solid #404040;
+	border: 1px solid #DADADA;
+	position: fixed;
+	top: 70%;
+}
+
+.search-buttons:hover {
+	background: #DADADA;
+	border-color: #B0B0B0;
+}
+
+#google {
+	left: 120px;
+}
+
+#lucky {
+	left: 276px;
+}
+
+.footer {
+	display: table;
+	height: 40px;
+	width: 100%;
+	background: #f2f2f2;
+	position: fixed;
+	bottom: 0;
+	border-top: 1px solid #DADADA;
+}
+
+.footer ul {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.footer li {
+	display: inline-block;
 }
