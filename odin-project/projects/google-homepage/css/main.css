@@ -57,31 +57,13 @@ li {
 	border-radius: 2px;
 }
 
+
 .square {
+	z-index: 0;
 	height: 11px; width: 11px;
 	background: #c2c2c2;
-	border-radius: 2px;
+	border-radius: 15%;
 	position: absolute;
-}
-
-.square p {
-	position: absolute;
-	margin-top: -2px;
-	margin-left: 2.5px;
-	font-size: 17.2px;
-	font-weight: 100;
-	color: transparent;
-	text-align: center;
-}
-
-.square p:hover {
-	color: #fff;
-}
-
-.square:hover {
-	background: #404040;
-	border-radius: 50%;
-	transform: rotate(45deg);
 }
 
 #one {
@@ -100,17 +82,30 @@ li {
 	margin: 14px 0 0 14px;
 }
 
-/*.h_apps {
-	z-index: 1;
+.apps-cover {
 	height: 26px; width: 26px;
+	border-radius: 10%;
 	background: transparent;
-	border-radius: 2px;
-	outline: red solid 1px;
+	margin-left: -0.5px;
+	transform: translate(0, 0px);
 }
 
-.h_apps:hover {
+.apps-cover:hover {
 	background: #404040;
-}*/
+}
+
+.capA {
+	color: transparent;
+	font-weight: 100;
+	position: absolute;
+	font-size: 38px;
+	margin-left: -25px;
+	transform: translate(0, -5px);
+}
+
+.capA:hover {
+	color: #fff;
+}
 
 /* SEARCH CONTENT */
 
@@ -118,9 +113,9 @@ li {
 	height: 360px; width: 520px;
 
  	position: fixed;
- 	top: 50%;
+ 	top: 40%;
  	left: 50%;
- 	transform: translate(-50%, -50%);
+ 	transform: translate(-50%, -40%);
 }
 
 .logo {
