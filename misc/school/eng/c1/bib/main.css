@@ -1,0 +1,68 @@
+body {
+	position: fixed;
+	height: 10000px;
+	font-family: Arial, sans-serif;
+}
+
+.crossbeam {
+	z-index: 1;
+	position: absolute;
+	height: 50px;
+	width: 95%;
+	background: #404040;
+	margin-top: 170px;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 5px;
+	border: 5px solid #404040;
+}
+
+.jumbotron {
+	z-index: 2;
+	height: 300px;
+	width: 356.1px;
+	position: absolute;
+	margin-top: 45px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 15px;
+	border: 5px solid #404040;
+}
+
+.info {
+	position: absolute;
+	height: 150px;
+	width: 32%;
+	margin-top: 425px;
+	background: gray;
+	border-radius: 5px;
+}
+
+#topic {
+	left: 12%;
+}
+
+#thesis {
+	left: 56%;
+}
+
+.topic {
+	width: 50%;
+	height: 150px;
+	outline: white dashed 1px;
+}
+
+.thesis {
+	width: 50%;
+	height: 150px;
+	margin-top: 0px;
+	outline: black dashed 1px;
+}
+
+.sources {
+	width: 80%;
+	position: relative;
+	margin-top: 625px;
+	margin-left: 50%;
+	transform: (-50%, 0);
+}
