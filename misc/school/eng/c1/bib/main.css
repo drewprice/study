@@ -1,14 +1,62 @@
 body {
-	position: fixed;
-	height: 10000px;
+	position: absolute;
 	font-family: Arial, sans-serif;
+	overflow: scroll;
+}
+
+.nav {
+	z-index: 3;
+	height: 45px;
+	width: 100%;
+	position: fixed;
+	background: #fafafa;
+	border-bottom: 1px solid lightgray;
+}
+
+.navbar {
+	z-index: 3;
+	position: fixed;
+	width: 49.5%;
+	display: table;
+}
+
+#n-l {
+	margin-left: 0.5%;
+}
+
+#n-r {
+	margin-left: 49.5%;
+	text-align: right;
+}
+
+.navbutton {
+	height: 25px;
+	width: 65px;
+	background: lightgray;
+	border-radius: 3px;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.navbutton:hover {
+	background: gray;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 0.85em;
+	font-weight: lighter;
+	display: inline-block;
+	margin: 10px;
 }
 
 .crossbeam {
 	z-index: 1;
 	position: absolute;
 	height: 50px;
-	width: 95%;
+	width: 98%;
 	background: #404040;
 	margin-top: 170px;
 	margin-left: 50%;
@@ -19,31 +67,30 @@ body {
 
 .jumbotron {
 	z-index: 2;
-	height: 300px;
-	width: 356.1px;
+	height: 350px;
+	width: 85%;
 	position: absolute;
-	margin-top: 45px;
+	margin-top: 105px;
 	left: 50%;
 	transform: translate(-50%, 0);
 	border-radius: 15px;
-	border: 5px solid #404040;
 }
 
 .info {
 	position: absolute;
-	height: 150px;
-	width: 32%;
-	margin-top: 425px;
+	height: 125px;
+	width: 60%;
+	left: 20%;
 	background: gray;
 	border-radius: 5px;
 }
 
 #topic {
-	left: 12%;
+	margin-top: 525px;
 }
 
 #thesis {
-	left: 56%;
+	margin-top: 725px;
 }
 
 .topic {
