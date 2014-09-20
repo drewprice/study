@@ -1,0 +1,107 @@
+body {
+	background: #ffffff;
+	font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+	height: 60px;
+	width: 100%;
+	background: #f2f2f2;
+}
+
+.navbar a {
+	color: #ffffff;
+	font-size: 0.8em;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.navbar li {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+}
+
+	/* <-- NAV LEFT */
+	.n-l {
+		float: left;
+	}
+
+		#logo {
+			height: 33px;
+			width: 92px;
+			vertical-align: middle;
+			line-height: 60px;
+			margin: 0 17px 0 17px;
+		}
+
+		#search_box {
+			height: 25px;
+			border: 1px solid #DADADA;
+			margin-right: 0;
+		}
+
+		#search_button {
+			height: 29px;
+			width: 50px;
+			font-size: 1em;
+			background: #4285f4;
+			border-radius: 2px;
+			color: #ffffff;
+			border: none;
+			margin-left: 0;
+		}
+
+	/* NAV RIGHT --> */
+	.n-r {
+		float: right;
+		margin-right: 30px;
+	}
+
+		.apps {
+			height: 26px;
+			width: 26px;
+		}
+
+			.square {
+				height: 12px;
+				width: 12px;
+				background: #404040;
+				position: absolute;
+				border-radius: 2px;
+			}
+
+				#sq2 {
+					margin-left: 14px;
+				}
+
+				#sq3 {
+					margin-top: 14px;
+				}
+
+				#sq4 {
+					margin: 14px 0 0 14px;
+				}
+
+		#sign-in_button {
+			padding: 8px 13px 8px 13px;
+			background: #4285f4;
+			border-radius: 2px;
+			margin-left: 15px;
+		}
+/* SUBNAV */
+
+.subnav {
+	height: 60px;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.subnav li {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+	margin-left: 15px;
+}
