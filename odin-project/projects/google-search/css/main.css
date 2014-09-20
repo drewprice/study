@@ -3,6 +3,11 @@ body {
 	font-family: Arial, sans-serif;
 }
 
+a {
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
 /* NAVBAR */
 .navbar {
 	height: 60px;
@@ -40,6 +45,8 @@ body {
 			height: 25px;
 			border: 1px solid #DADADA;
 			margin-right: 0;
+			font-family: arial, sans-serif;
+			font-size: 1em;
 		}
 
 		#search_button {
@@ -170,7 +177,7 @@ body {
 	}
 
 		.sn-l li {
-			margin-right: 15px;
+			margin-right: 20px;
 		}
 
 		#more:hover {
@@ -220,4 +227,86 @@ body {
 			border: 1px solid #DADADA;
 			border-radius: 2px;
 			margin-left: 15px;
+		}
+
+		#settings:hover {
+			background: #F6F6F6;
+			color: #606060;
+			box-shadow: 1px 1px 1px 0 #DADADA;
+			text-decoration: none;
+		}
+
+/* RESULTS */
+.search-results {
+	width: 50%;
+	margin-left: 130px;
+	position: relative;
+	border-bottom: 1px solid #f2f2f2;
+	padding-bottom: 25px;
+}
+
+	.result {
+		margin-top: 25px;
+	}
+
+		.result a {
+			text-decoration: none;
+			color: #1a0dab;
+			font-size: 1.15em;
+		}
+
+			.result a:hover {
+				text-decoration: underline;
+			}
+
+			.result a:visited {
+				color: #609;
+			}
+
+		.result h3 {
+			font-size: 0.85em;
+			color: #006621;
+			margin: 3px 0 3px 0;
+		}
+
+		.result p {
+			font-size: 0.85em;
+			color: #545454;
+		}
+
+/* FOOTER */
+.fl-wrap {
+	width: 50%;
+	margin: 25px 0 25px 130px;
+}
+
+	.footer_logo {
+		position: relative;
+		height: 33px;
+		width: 92px;
+		margin-left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+.footer {
+	height: 84px;
+	width: 100%;
+	background: #f2f2f2;
+	border-top: 1px solid #DADADA;
+}
+
+	.f-nav {
+		width: 50%;
+		margin-left: 130px;
+	}
+
+		.f-nav li {
+			display: inline-block;
+			line-height: 84px;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+
+		.f-nav a {
+			color: #777;
 		}
