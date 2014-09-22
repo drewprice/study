@@ -1,5 +1,4 @@
 function FirstFactorial (num) {
-	var ans = 1;
-	for (var i = num; i > 0; i--) ans *= i;
-	return ans
+	for (var i = num - 1; i > 0; i--) num *= i;
+	return num
 };
