@@ -1,26 +1,20 @@
 function createGrid(dim) {
-	squares = dim * dim;
-	sides = (512/dim);
-
-/*	$(".box")
-		.css(
-		{
-			'height': 'sides',
-			'width': 'sides'
-		});*/
+	var squares = dim * dim;
+	var sides = (512/dim);
 
 	for (var i = 1; i <= squares; i++) {
-	$("<div />")
-		.addClass("box")
-		.attr('id', 'div' + i)
-		.appendTo(".container");
+		$("<div />")
+			.addClass("box")
+			.attr('id', 'div' + i)
+			.appendTo(".container");
 	};
+
+	$(".box")
+		.height(sides)
+		.width(sides);
 };
 
-$(document).ready(function() {
-	
-	createGrid(16);
-
+function draw() {
 	$(".box")
 		.on('mouseenter', function() {
 			$(this).addClass("highlight");
@@ -28,6 +22,13 @@ $(document).ready(function() {
 		.on('click', function() {
 			$(this).removeClass("highlight")
 		});
+}
+
+$(document).ready(function() {
+
+	createGrid(16);
+
+	draw();
 
 	$("#invert")
 		.on("click", function() {
@@ -43,11 +44,21 @@ $(document).ready(function() {
 	$("#new")
 		.on("click", function() {
 			
-			input = prompt("How many squares per side would you like?");
+			input = prompt("How many squares would you like on each side? Think powers of two (2, 4, 8, 16...).");
+			if (isNaN(input)) {
+				alert(input + "? Nope. Numbers only please.");
+				input = 2;
+			}
+			if (input > 64) {
+				boxes = input * input;
+				alert("Making " + boxes + " tiny squares. It may take a moment...")
+			}
 
 			$(".container").empty();
 			
-			createGrid(input)
+			createGrid(input);
+
+			draw();
 		});
 
 });
