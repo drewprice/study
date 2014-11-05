@@ -69,10 +69,14 @@
 				createGrid(input);
 				draw();
 			});
-		/*TODO*/
-		// $("#sketch > a")
-		// 	.on("mouseenter", function() {
-
-		// 	})
+		
+		/* Link to source code */
+			$('#heck').hover(function() {
+			    $(this).addClass('spotlight')
+			    	.text("< code/ >").appendTo(this);
+			}, function() {
+			    $(this).removeClass('spotlight')
+			    	.text("heckasketch").appendTo(this);
+			});
 
 	});

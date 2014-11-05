@@ -7,16 +7,30 @@
 		text-align: center;
 	}
 
-		#sketch > a {
+		#heck {
 			text-decoration: none;
 			font-family: Arial, sans-serif;
 			font-size: 1.75em;
-			font-weight: 200;
+			font-weight: 400;
 			color: #D8D8D8;
+			-webkit-transition: all 0.3s ease;
+	    	-moz-transition: all 0.3s ease;
+	    	-o-transition: all 0.3s ease;
+	    	transition: all 0.3s ease;
 		}
 
-		#sketch > a:hover {
-			color: #D4D4D4;
+		#heck:hover {
+			color: #fff;
+			font-size: 1.75em;
+			font-family: 'Source Code Pro', serif;
+			font-weight: 300;
+		}
+
+		.spotlight {
+			background-color: #f0f0f0;
+			padding: 1px 25px;
+			border-radius: 3px;
+			color: #fff;
 		}
 
 
