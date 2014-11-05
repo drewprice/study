@@ -1,69 +1,92 @@
-#sketch {
-	height: 2%;
-	width: 33%;
-	margin: 1% auto;
-}
 
-#sketch h1 {
-	font-family: Arial, sans-serif;
-	text-align: center;
-	font-size: 1.75em;
-	font-weight: 200;
-	color: #D8D8D8;
-}
+/* Heckasketch header & link to source code */
+	#sketch {
+		height: 2%;
+		width: 33%;
+		margin: 1% auto;
+		text-align: center;
+	}
 
-.wrap {
-	width: 512px;
-	margin: auto;
-	text-align: center;
-}
+		#heck {
+			text-decoration: none;
+			font-family: Arial, sans-serif;
+			font-size: 1.75em;
+			font-weight: 400;
+			color: #D8D8D8;
+			-webkit-transition: all 0.3s ease;
+	    	-moz-transition: all 0.3s ease;
+	    	-o-transition: all 0.3s ease;
+	    	transition: all 0.3s ease;
+		}
 
-a {
-	padding: 5px 10px;
-	background-color: #f0f0f0;
-	color: #666;
-	text-decoration: none;
-	border-radius: 3px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 200;
-	margin: 10px;
-}
+		#heck:hover {
+			color: #fff;
+			font-size: 1.75em;
+			font-family: 'Source Code Pro', serif;
+			font-weight: 300;
+		}
 
-a:hover {
-	background-color: #D8D8D8;
-	color: #5C5C5C;
-}
+		.spotlight {
+			background-color: #f0f0f0;
+			padding: 1px 25px;
+			border-radius: 3px;
+			color: #fff;
+		}
 
 
-#new {
-	padding: 10px 20px;
-	font-size: 1.2em;
-	font-weight: 200;
-	background-color: #B8D4D4;
-	color: #fff;
-	display: inline-block;
-}
+/* User Controls */
+	.wrap {
+		width: 512px;
+		margin: auto;
+		text-align: center;
+	}
 
-#new:hover {
-	background-color: #A6BFBF;
-}
+		.wrap > a {
+			padding: 5px 10px;
+			background-color: #f0f0f0;
+			color: #666;
+			text-decoration: none;
+			border-radius: 3px;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-weight: 200;
+			margin: 10px;
+		}
 
-.container {
-	height: 512px;
-	width: 512px;
-	margin: 0.5% auto;
-	border: 1px solid #f0f0f0;
-	border-radius: 2%;
-	overflow: hidden;
-}
+		.wrap > a:hover {
+			background-color: #D8D8D8;
+			color: #5C5C5C;
+		}
 
-.box {
-	height: 0px;
-	width: 0px;
-	margin: 0;
-	float: left;
-}
+			#new {
+				padding: 10px 20px;
+				font-size: 1.2em;
+				font-weight: 200;
+				background-color: #B8D4D4;
+				color: #fff;
+				display: inline-block;
+			}
 
-.highlight {
-	background: #666;
-}
+			#new:hover {
+				background-color: #A6BFBF;
+			}
+
+/* Grid */
+	.container {
+		height: 512px;
+		width: 512px;
+		margin: 0.5% auto;
+		border: 1px solid #f0f0f0;
+		border-radius: 2%;
+		overflow: hidden;
+	}
+
+		.box {
+			height: 0px;
+			width: 0px;
+			margin: 0;
+			float: left;
+		}
+
+		.highlight {
+			background: #666;
+		}
