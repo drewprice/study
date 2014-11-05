@@ -1,64 +1,78 @@
-function createGrid(dim) {
-	var squares = dim * dim;
-	var sides = (512/dim);
+// Functions
+	/* Build grid */
+	function createGrid(dim) {
+		var squares = dim * dim;
+		var sides = (512/dim);
 
-	for (var i = 1; i <= squares; i++) {
-		$("<div />")
-			.addClass("box")
-			.attr('id', 'div' + i)
-			.appendTo(".container");
+		for (var i = 1; i <= squares; i++) {
+			$("<div />")
+				.addClass("box")
+				.attr('id', 'div' + i)
+				.appendTo(".container");
+		};
+
+		$(".box")
+			.height(sides)
+			.width(sides);
 	};
 
-	$(".box")
-		.height(sides)
-		.width(sides);
-};
+	/* Initialize sketching */
+	function draw() {
+		$(".box")
+			.on('mouseenter', function() {
+				$(this).addClass("highlight");
+			})
+			.on('click', function() {
+				$(this).removeClass("highlight")
+			});
+	}
 
-function draw() {
-	$(".box")
-		.on('mouseenter', function() {
-			$(this).addClass("highlight");
-		})
-		.on('click', function() {
-			$(this).removeClass("highlight")
-		});
-}
+// Application
+	$(document).ready(function() {
 
-$(document).ready(function() {
+		/* Initialize */
+		createGrid(16);
+		draw();
 
-	createGrid(16);
+		/* User Controls */
+		$("#invert")
+			.on("click", function() {
+				$(".container").find(".box").toggleClass("highlight");
+			});
 
-	draw();
+		$("#clear")
+			.on("click", function() {
+				$(".container").find(".highlight").removeClass("highlight");
+			});
 
-	$("#invert")
-		.on("click", function() {
-			$(".container").find(".box").toggleClass("highlight");
-		});
+		$("#new")
+			.on("click", function() {
+				
+				input = prompt("How many squares would you like on each side? Think powers of two (2, 4, 8, 16...).");
+				/* Deal with oddities */
+					// Handle non-numerical user input
+					if (isNaN(input)) {
+						alert(input + "? Nope. Numbers only please.");
+						input = 2;
+					}
+					// Handle prompt cancellation
+					if (input == null) return;
+					// Notify user of slow build
+					if (input > 64) {
+						boxes = input * input;
+						alert("Making " + boxes + " tiny squares. It may take a moment...")
+					}
 
-	$("#clear")
-		.on("click", function() {
-			$(".container").find(".highlight").removeClass("highlight");
-		});
+				// Empty current .container
+				$(".container").empty();
+				// Initialize new grid
+				createGrid(input);
+				draw();
+			});
+		/*TODO*/
+		// $("#sketch > a")
+		// 	.on("mouseenter", function() {
 
-// Create a new grid with user defined dimensions
-	$("#new")
-		.on("click", function() {
-			
-			input = prompt("How many squares would you like on each side? Think powers of two (2, 4, 8, 16...).");
-			if (isNaN(input)) {
-				alert(input + "? Nope. Numbers only please.");
-				input = 2;
-			}
-			if (input > 64) {
-				boxes = input * input;
-				alert("Making " + boxes + " tiny squares. It may take a moment...")
-			}
+		// 	})
 
-			$(".container").empty();
-			
-			createGrid(input);
-
-			draw();
-		});
-
-});
+	});
