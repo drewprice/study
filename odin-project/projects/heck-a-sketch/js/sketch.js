@@ -58,9 +58,15 @@
 					// Handle prompt cancellation
 					if (input == null) return;
 					// Notify user of slow build
-					if (input > 64) {
+					if (input > 64 && input < 129) {
 						boxes = input * input;
 						alert("Making " + boxes + " tiny squares. It may take a moment...")
+					}
+					// Jimmy's Error
+					if (input > 128) {
+						boxes = input * input;
+						alert(boxes + " tiny squares is too damn much. How about 128x128 instead? Yeah yeah, let's do that. Cool.")
+						input = 128;
 					}
 
 				// Empty current .container
