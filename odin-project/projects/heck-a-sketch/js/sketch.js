@@ -49,6 +49,7 @@
 			.on("click", function() {
 				
 				input = prompt("How many squares would you like on each side? Think powers of two (2, 4, 8, 16...).");
+				boxes = input * input;
 				/* Deal with oddities */
 					// Handle non-numerical user input
 					if (isNaN(input)) {
@@ -58,19 +59,16 @@
 					// Handle prompt cancellation
 					if (input == null) return;
 					// Notify user of slow build
-					if (input > 64 && input < 129) {
-						boxes = input * input;
-						alert("Making " + boxes + " tiny squares. It may take a moment...")
-					}
+					if (input > 64 && input < 129) alert("Making " + boxes + " tiny squares. It may take a moment...");
 					// Jimmy's Error
 					if (input > 128) {
-						boxes = input * input;
 						alert(boxes + " tiny squares is too damn much. How about 128x128 instead? Yeah yeah, let's do that. Cool.")
 						input = 128;
 					}
 
 				// Empty current .container
 				$(".container").empty();
+				
 				// Initialize new grid
 				createGrid(input);
 				draw();
