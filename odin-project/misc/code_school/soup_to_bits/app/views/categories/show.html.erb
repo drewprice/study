@@ -1,0 +1,13 @@
+<h1><%= @category.name %></h1>
+<ul>
+	<% @category.soups.each do |soup| %>
+		<li>
+			<%= link_to soup.name, soup %>
+			<% if soup.featured %>
+				**
+			<% end %>
+		</li>
+	<% end %>
+</ul>
+
+<p><%= link_to "Back to Soup Categories", categories_path %></p>
