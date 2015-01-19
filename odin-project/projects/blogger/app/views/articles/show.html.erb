@@ -1,9 +1,9 @@
 <h1>
-	<%= @article.title %>
+	<%= @article.title.upcase %>
 </h1>
 
 <p>
 	<%= @article.body %>
 </p>
 
-<%= link_to "Back", articles_path %>
+<%= render 'back' %>

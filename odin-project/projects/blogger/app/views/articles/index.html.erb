@@ -1,13 +1,26 @@
-<h1>All Articles</h1>
+<div class="articles_index">
 
-<ul>
-	<% @articles.each do |article| %>	
-		<li>
-			<%= link_to article.title, article_path(article),
-				class: 'article_title',
-				id: "article_#{article.id}" %>
-		</li>
-	<% end %>
-</ul>
+	<h1>ALL ARTICLES</h1>
 
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+	<div class="articles_list">
+		<ul>
+			<% @articles.each do |article| %>	
+				<li>
+					<%= link_to article.title, article_path(article),
+						class: 'article_title',
+						id: "article_#{article.id}" %><br>
+						
+						<%= link_to "Edit", edit_article_path(article),
+									class: "article_UD" %>
+						 | 
+						<%= link_to "Delete", article_path(article),
+									method: :delete,
+									data: { confirm: "Are you sure?" },
+									class: "article_UD" %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+	<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
+</div>

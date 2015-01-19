@@ -1,0 +1,36 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+	font-weight: 800;
+	color: red;
+}
+
+a {
+	text-decoration: none;
+	color: grey;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	color: grey;
+}
+
+.article_title {
+	font-size: 1em;
+	font-weight: 700;
+	color: cadetblue;
+}
+
+
+.article_UD {
+	font-size: 0.75em;
+}
+
+.article_index {
+	margin-left: 50%;
+}
