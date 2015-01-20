@@ -1,0 +1,17 @@
+<ul>
+	<% @articles.each do |article| %>	
+		<li>
+			<%= link_to article.title, article_path(article),
+				class: 'article_title',
+				id: "article_#{article.id}" %><br>
+				
+				<%= link_to "Edit", edit_article_path(article),
+							class: "article_UD" %>
+				<span id="vertical"> | </span>
+				<%= link_to "Delete", article_path(article),
+							method: :delete,
+							data: { confirm: "Are you sure?" },
+							class: "article_UD" %>
+		</li>
+	<% end %>
+</ul>

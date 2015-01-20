@@ -1,0 +1,8 @@
+<div class="comment">
+	<h4><strong><%= comment.author_name %></strong> says...</h4>
+	
+	<p><%= comment.body %></p>
+	
+	<p class="later">
+		<%= distance_of_time_in_words(comment.created_at, Time.now) %> ago</p>
+</div>

@@ -1,21 +1,21 @@
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: #808080;
+	color: #696153;
 }
 
 h1 {
 	font-weight: 800;
-	color: red;
+	color: #FFA600;
 	text-align: center;
 }
 
 a {
 	text-decoration: none;
-	color: #808080;
+	color: #696153;
 }
 
 a:hover {
-	color: lightgrey;
+	color: #302B2F;
 }
 
 ul {
@@ -26,16 +26,13 @@ ul {
 }
 
 li {
-	color: grey;
+	color: #696153;
 }
 
-.articles_index {
-
-}
 
 .article_body {
-	min-height: 33%;
-	border: 1px solid #BBE2F2;
+	/*width: 34%;*/
+	border: 1px solid #FFD596;
 	border-radius: 5px;
 	margin: 0 33% 5px 33%;
 	padding: 10px;
@@ -43,7 +40,7 @@ li {
 
 	.article_title {
 		font-size: 1em;
-		font-weight: 700;
+		font-weight: 400;
 	}
 
 	.article_UD {
@@ -51,8 +48,12 @@ li {
 		margin-left: auto;
 	}
 
+	#vertical {
+		font-size: 0.75em;
+	}
+
 .new_article {
-	color: #FFD700;
+	color: #FFD596;
 	font-weight: 700;
 	font-size: 0.85em;
 	text-align: center;
@@ -60,11 +61,38 @@ li {
 	transform: translate(-33%, 0);
 }
 
+.new_article:hover {
+	color: #FFA600;
+}
+
 .back {
-	color: #FFD700;
+	color: #FFD596;
 	font-weight: 700;
 	font-size: 0.85em;
 	text-align: center;
 	margin-left: 33%;
 	transform: translate(-33%, 0);
+}
+
+.back:hover {
+	color: #FFA600;
+}
+
+.flash {
+	background-color: #FFD596;
+	color: #ffffff;
+	width: 34%;
+	margin-left: 33%;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+}
+
+#comments {
+	width: 34%;
+	margin-left: 33%;
+}
+
+.later {
+	color: #FFD596;
+	font-size: 0.5em;
 }

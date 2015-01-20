@@ -7,3 +7,9 @@
 </p>
 
 <%= render 'back' %>
+
+<div id="comments">
+	<%= render partial: '/articles/comment', collection: @article.comments %>
+
+	<%= render partial: 'comments/form' %>
+</div>
