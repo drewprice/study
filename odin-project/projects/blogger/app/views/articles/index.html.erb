@@ -1,8 +1,6 @@
-<div class="articles_index">
+<h1>ALL ARTICLES</h1>
 
-	<h1>ALL ARTICLES</h1>
-
-	<div class="articles_list">
+	<div class="article_body">
 		<ul>
 			<% @articles.each do |article| %>	
 				<li>
@@ -22,5 +20,4 @@
 		</ul>
 	</div>
 
-	<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-</div>
+<%= link_to "NEW ARTICLE", new_article_path, class: "new_article" %>
