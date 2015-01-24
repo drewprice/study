@@ -13,7 +13,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
-		@article = Article.new
+		if params[:tag].present?
+			@article = Article.new(tag_list: params[:tag])
+		else
+			@article = Article.new
+		end
 	end
 
 	def edit
@@ -24,7 +28,7 @@ class ArticlesController < ApplicationController
 		@article = Article.create(article_params)
 
 		if @article.save
-			flash.notice = "'#{@article.title}' was created!'"
+			flash.notice = "'#{@article.title}' was created!"
 			redirect_to @article
 		else
 			render 'new'

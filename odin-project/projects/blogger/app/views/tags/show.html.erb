@@ -1,0 +1,22 @@
+<h1><%= @tag.name.upcase %></h1>
+
+	<div class="article_body">
+		<ul>		
+			<% @tag.articles.each do |article| %>
+				<li>
+					<%= link_to article.title, article_path(article)  %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+<%= link_to "NEW ARTICLE", new_article_path(tag: @tag.name, tag_id: @tag.id), class: "new_article" %>
+
+<% if params[:i].present? %>
+	<br><%= link_to "BACK", tags_path, class: "back" %>
+<% elsif params[:article_id].present? %>
+	<br><%= link_to "BACK", article_path(params[:article_id]), class: "back" %>
+<% end %>
+<br>
+<%= link_to "VIEW ARTICLES", articles_path, class: "new_article" %><br>
+<%= link_to "VIEW TAGS", tags_path, class: "new_article" %>

@@ -1,0 +1,14 @@
+<ul>
+	<% @tags.each do |tag| %>	
+		<li>
+			<%= link_to tag.name.capitalize, tag_path(tag, i: 1),
+				class: 'article_title',
+				id: "tag_#{tag.id}" %><br>
+				
+				<%= link_to "Delete", tag_path(tag),
+							method: :delete,
+							data: { confirm: "Are you sure?" },
+							class: "article_UD" %>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,18 @@
+<p class="tags">
+	<% if @article.tags.count > 1 %>
+		
+		<% @article.tags.each do |tag| %>
+			
+			<%= link_to tag.name.upcase, tag_path(tag, article_id: @article.id) %>
+			<% if tag != @article.tags.last %>
+				| 
+			<% end %>
+		<% end %>
+	
+	<% elsif @article.tags.count == 1 %>
+		
+		<% tag = @article.tags.first %>
+		<%= link_to tag.name.upcase, tag_path(tag, article_id: @article.id) %>
+	
+	<% end %>
+</p>
