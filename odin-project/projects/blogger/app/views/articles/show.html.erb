@@ -2,9 +2,11 @@
 	<%= @article.title.upcase %>
 </h1>
 
-<p class="article_body">
-	<%= @article.body %>
-</p>
+<div class="article_body">
+	<%= render 'image' %>
+	<p><%= @article.body %></p>
+</div>
+
 
 <%= render 'tags' %>
 

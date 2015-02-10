@@ -1,0 +1,5 @@
+<% if  @article.image.exists? %>
+	<p>
+		<%= image_tag @article.image.url, class: "image" %>
+	</p>
+<% end %>
