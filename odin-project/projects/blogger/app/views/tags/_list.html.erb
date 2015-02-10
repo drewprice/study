@@ -5,10 +5,12 @@
 				class: 'article_title',
 				id: "tag_#{tag.id}" %><br>
 				
+				<% if logged_in? %>
 				<%= link_to "Delete", tag_path(tag),
 							method: :delete,
 							data: { confirm: "Are you sure?" },
 							class: "article_UD" %>
+				<% end %>
 		</li>
 	<% end %>
 </ul>
