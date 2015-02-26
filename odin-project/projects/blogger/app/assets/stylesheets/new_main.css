@@ -14,6 +14,11 @@
 		margin: 0;
 	}
 
+	h3 {
+		color: #222;
+		font: 800 1.5em 'open sans'
+	}
+
 	a {
 		color: #302B2F;
 		text-decoration: none;
@@ -48,7 +53,7 @@
 	}
 
 	.article_body {
-		padding: 14px 7px 14px 7px;
+		padding: 14px 7px 6px 7px;
 		margin-top: 14px;
 		border: 1px solid #222;
 		border-left: none;
@@ -61,6 +66,11 @@
 
 	.tags {
 		font: 800 0.9em 'open sans';
+		margin-bottom: 4px;
+	}
+
+	.ampersand {
+		font: 400 1em 'Gentium Book Basic';
 	}
 
 	#back {
@@ -93,7 +103,7 @@
 	padding: 5px 10px 5px 10px;
 	border-radius: 5px;
 	font-style: italic;
-	font-size: 1em;
+	font-size: 1.1em;
 	transform: translate(-50%,0);
 	background-color: #FFD596;
 	color: #ffffff;
@@ -167,3 +177,39 @@
 #new_article {
 	margin-top: -65px;
 }
+
+	.field {
+		margin: 10px 50% 10px 0;
+		transform: translate(50%, 0);
+		text-align: right;
+	}
+
+	.actions {
+		margin: 10px;
+	}
+
+	input {
+		height: 20px;
+		border: 1px solid lightgrey;
+		border-radius: 5px;
+	}
+
+	#article_body {
+		height:225px;
+		width: 400px;
+		border: 1px solid lightgrey;
+		border-radius: 5px;
+	}
+
+	#comment_body {
+		height: 75px;
+		width: 400px;
+		border: 1px solid lightgrey;
+		border-radius: 5px;
+	}
+
+	#artical_image {
+		text-align: center;
+		border: none;
+		background-color: transparent;
+	}
