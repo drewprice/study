@@ -1,0 +1,169 @@
+#container {
+	width: 33%;
+	margin-left: 50%;
+	margin-top: 30px;
+	transform: translate(-50%,0);
+	font: 400 1em 'Gentium Book Basic';
+	text-align: center;
+	/*outline: black dotted 1px;*/
+}
+
+	h1 {
+		color: #222;
+		font: 800 3em 'open sans';
+		margin: 0;
+	}
+
+	a {
+		color: #302B2F;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #696153;
+		text-decoration: none;
+	}
+
+	ul, li {
+		list-style-type: none;
+		list-style-position: inside;
+		padding: 30px 0 30px 0;
+		margin: 5px;
+	}
+
+
+.line {
+	height: 0.5px;
+	width: 25%;
+	margin-left: 50%;
+	transform: translate(-50%,0);
+	background-color: #222;
+}
+
+/* BODY CONTENT */
+	.image {
+		border-radius: 100%;
+		height: 150px;
+		width: 150px;
+	}
+
+	.article_body {
+		padding: 14px 7px 14px 7px;
+		margin-top: 14px;
+		border: 1px solid #222;
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+		/*border-radius: 5px;*/
+		text-align: left;
+		/*outline: red solid 1px;*/
+	}
+
+	.tags {
+		font: 800 0.9em 'open sans';
+	}
+
+	#back {
+		text-align: left;
+		font-style: italic;
+		padding-top: 6px;
+		border-top: 1px solid #222;
+		/*outline: red solid 1px;*/
+	}
+
+	.nav_buttons {
+		position: fixed;
+		display: block;
+		bottom: 16px;
+		right: 12px;
+		padding: 6px 8px 6px 8px;
+		font-size: 1.2em;
+		font-style: italic;
+		margin-right: -100%;
+	}
+		#nav_new_article {
+			right: 120px;
+			background-color: lightgrey;
+			border-radius: 3px; 
+		}
+
+.flash {
+	width: 33%;
+	margin-left: 50%;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+	font-style: italic;
+	font-size: 1em;
+	transform: translate(-50%,0);
+	background-color: #FFD596;
+	color: #ffffff;
+}
+
+#comments {
+	text-align: left;
+}
+
+	.author_name {
+		font: 800 0.9em 'open sans';
+	}
+
+	#says {
+		font-style: italic;
+	}
+
+	.later {
+	color: #FFD596;
+	font-style: italic;
+	font-size: 0.75em;
+	}
+
+.login_status {
+	line-height: 65px;
+	text-align: center;
+	font-style: italic;
+}
+
+.login {
+	display: table-cell;
+	height: 65px;
+	width: 65px;
+	position: fixed;
+	bottom:16px;
+	left: 12px;
+	margin: 5px;
+	background-color: #222;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 1.5em;
+}
+
+.login:hover {
+	background-color: #fff;
+	border: 1px solid #222;
+	color: #222;
+}
+
+.username {
+	display: table-cell;
+	height: 65px;
+	width: 65px;
+	position: fixed;
+	bottom:16px;
+	left: 12px;
+	margin: 5px;
+	background-color: #222;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 0.9em;
+}
+
+.logout {
+	position: fixed;
+	right: 12px;
+	bottom: 16px;
+	font-size: 2em;
+}
+
+#new_article {
+	margin-top: -65px;
+}

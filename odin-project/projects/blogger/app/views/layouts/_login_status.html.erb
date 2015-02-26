@@ -1,0 +1,8 @@
+<p class="login_status">
+	<% if logged_in? %>
+		<%= link_to "#{current_user.username.downcase}", author_path(current_user.id), class: "username" %><break>
+		<%= link_to "logout", logout_path, class: "logout" %>
+	<% else %>
+		<%= link_to "login", login_path, class: "login" %>
+	<% end %>
+</p>

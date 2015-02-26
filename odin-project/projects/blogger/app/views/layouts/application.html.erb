@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
+ 	<title></title>
+ 	<!-- FOR "main.css": -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'> -->
+	<!-- FOR "new_main.css": -->
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400italic,400|Open+Sans:800' rel='stylesheet' type='text/css'>
+
 	<%= favicon_link_tag %>
 
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'>
-  
- 	<title>Blog</title>
  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
  	<%= csrf_meta_tags %>
 </head>
+
 <body>
 	
-	<% if flash[:notice] %>
-		<p class="flash"><%= flash.notice %></p>
-	<% end %>
+	<%= render 'layouts/flash' %>
 
-	<%= yield %>
-
-	<h6 class="authentication">
-		<% if logged_in? %>
-			<%= link_to "#{current_user.username}", author_path(current_user.id) %>
-			<%= link_to "(logout)", logout_path, id: "logout" %>
-		<% else %>
-			<%= link_to "Login", login_path %>
-		<% end %>
-	</h6>
+	<div id="container">
+		
+		<div id="content">
+			
+			<%= yield %>
+		
+		</div>
+	</div>
+	
+	<%= render 'layouts/login_status' %>
 </body>
 </html>

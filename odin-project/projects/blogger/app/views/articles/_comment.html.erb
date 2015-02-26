@@ -1,5 +1,5 @@
 <div class="comment">
-	<h4><strong><%= comment.author_name %></strong> says...</h4>
+	<h4><span class="author_name"><%= comment.author_name.upcase %></span><span id="says"> says...</span></h4>
 	
 	<p><%= comment.body %></p>
 	

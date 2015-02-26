@@ -1,6 +1,8 @@
 <ul>
 	<% @articles.each do |article| %>	
-		<li>
+		<div class="line"></div>
+		<li class="content_list_item">
+
 			<%= link_to article.title, article_path(article),
 				class: 'article_title',
 				id: "article_#{article.id}" %><br>
@@ -15,5 +17,6 @@
 								class: "article_UD" %>
 				<% end %>
 		</li>
+		<div class="line"></div>
 	<% end %>
 </ul>

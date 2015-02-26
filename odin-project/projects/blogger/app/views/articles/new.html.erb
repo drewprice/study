@@ -1,9 +1,8 @@
-<h1>Create a New Article</h1>
-
+<h1>CREATE A NEW ARTICLE</h1>
 <%= render 'form' %>
 
 <% if params[:tag].present? %>
-	<%= link_to 'BACK', tag_path(params[:tag_id]), class: 'back' %>
+	<%= link_to 'Back', tag_path(params[:tag_id]), class: 'back' %>
 <% else %>
 	<%= render 'back' %>	
 <% end %>

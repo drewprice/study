@@ -5,7 +5,7 @@
 			
 			<%= link_to tag.name.upcase, tag_path(tag, article_id: @article.id) %>
 			<% if tag != @article.tags.last %>
-				| 
+				& 
 			<% end %>
 		<% end %>
 	
