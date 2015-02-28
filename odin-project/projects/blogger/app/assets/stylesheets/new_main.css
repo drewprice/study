@@ -41,7 +41,7 @@
 
 .line {
 	height: 0.5px;
-	width: 25%;
+	width: 100px;
 	margin-left: 50%;
 	transform: translate(-50%,0);
 	background-color: #222;
@@ -105,14 +105,10 @@
 	}
 
 	.nav_buttons {
-		position: fixed;
-		display: block;
-		bottom: 16px;
-		right: 12px;
 		padding: 6px 8px 6px 8px;
 		font-size: 1.2em;
 		font-style: italic;
-		margin-right: -100%;
+		/*outline: red dotted 1px;*/
 	}
 		#nav_new_article {
 			right: 120px;
@@ -120,7 +116,6 @@
 			background-color: darkgrey;
 			border: 1px solid transparent;
 			border-radius: 3px;
-			/*box-shadow: 3px 3px 0 grey;*/
 			transition: box-shadow 0.7s, border 0.4s;
 		}
 
@@ -178,10 +173,10 @@
 		border-radius: 100%;
 		color: #fff;
 		font-size: 1.5em;
-		transition: background-color 0.3s, color 0.3s;
+		transition: background-color 0.3s, color 0.3s, transform 0.3s;
 	}
 
-	.login:hover {
+	.login:hover,.username:hover,.logout:hover {
 		transition: background-color 0.3s, color 0.3s;
 		background-color: #fff;
 		color: grey;
@@ -198,11 +193,7 @@
 		background-color: transparent;
 		border: 2px solid #222;
 		border-radius: 100%;
-		box-shadow: 3px 3px 0 black;
-	}
-
-	#outer_circle:hover {
-		box-shadow: 5px 5px red;
+		box-shadow: 3px 3px 0 #222;
 	}
 
 	.username {
@@ -216,14 +207,21 @@
 		background-color: #222;
 		border-radius: 100%;
 		color: #fff;
-		font-size: 0.9em;
+		font-size: 0.8em;
 	}
 
 	.logout {
 		position: fixed;
-		right: 12px;
+		padding: 5px 10px 5px 10px;
+		background-color: #222;
+		border-radius: 5px;
+		border: 1px solid #222;
+		right: 16px;
 		bottom: 16px;
-		font-size: 2em;
+		font-size: 1.5em;
+		font-style: italic;
+		color: #fff;
+		box-shadow: 3px 3px 0 #222;
 	}
 
 #new_article {
@@ -262,7 +260,7 @@
 		color: #fff;
 		background-color: darkgrey;
 		border: 1px solid darkgrey;
-		padding: 4px 12px 20px 12px;
+		padding: 4px 12px 23px 12px;
 		margin-top: -100px;
 	}
 
@@ -305,3 +303,25 @@
 		border: none;
 		background-color: transparent;
 	}
+
+
+table {
+	margin: 30px 0 30px 0;
+}
+
+td {
+	padding: 5px 10px 5px 10px;
+}
+
+.author_functions {
+	font-style: italic;
+	padding: 2px;
+}
+
+.vert_line {
+	padding: 1px;
+}
+
+.article_UD {
+	font-style: italic;
+}

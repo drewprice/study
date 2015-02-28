@@ -1,8 +1,8 @@
 <h1>ALL TAGS</h1>
 
-	<div class="article_body">
-		<%= render 'list' %>
-	</div>
 
-<%= link_to "NEW ARTICLE", new_article_path, class: "new_article" %><br>
-<%= link_to "VIEW ARTICLES", articles_path, class: "new_article" %>
+<%= render 'list' %>
+
+
+<%= render partial: '/articles/new_article_link' %>
+<%= link_to "view articles", articles_path, class: "nav_buttons"  %>

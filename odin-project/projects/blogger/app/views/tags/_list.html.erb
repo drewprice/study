@@ -1,6 +1,7 @@
 <ul>
-	<% @tags.each do |tag| %>	
-		<li>
+	<% @tags.sort_by(&:name).each do |tag| %>	
+		<div class="line"></div>
+		<li class="content_list_item">
 			<%= link_to tag.name.capitalize, tag_path(tag, i: 1),
 				class: 'article_title',
 				id: "tag_#{tag.id}" %><br>
@@ -12,5 +13,6 @@
 							class: "article_UD" %>
 				<% end %>
 		</li>
+		<div class="line"></div>
 	<% end %>
 </ul>
