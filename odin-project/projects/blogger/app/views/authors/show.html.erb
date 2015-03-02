@@ -1,12 +1,14 @@
-<p>
-  <strong>Username:</strong>
-  <%= @author.username %>
-</p>
+<h1>
+  <%= @author.username.upcase %>
+</h1>
 
 <p>
-  <strong>Email:</strong>
   <%= @author.email %>
 </p>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+<p>
+	Created on <%= @author.created_at.to_date %>
+</p>
+
+<%= link_to 'back', authors_path, class:"back" %>
+<%= link_to 'edit', edit_author_path(@author), class: "back" %>

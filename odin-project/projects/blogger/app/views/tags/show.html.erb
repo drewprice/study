@@ -17,9 +17,9 @@
 <div id="back">
 
 	<% if params[:article_id].present? %>
-		<%= link_to "Back", article_path(params[:article_id]), class: "back" %>
+		<%= link_to "back", article_path(params[:article_id]), class: "back" %>
 	<% else %>
-		<%= link_to "Back", tags_path, class: "back" %>
+		<%= link_to "back", tags_path, class: "back" %>
 	<% end %>
 </div>
 

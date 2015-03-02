@@ -1,6 +1,13 @@
-<h1>Editing Author</h1>
+<h1><%= @author.username.upcase %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @author %> |
-<%= link_to 'Back', authors_path %>
+<%= link_to 'back', authors_path, class:"back" %>
+<%= link_to 'show', @author, class:"back" %>
+
+<style type="text/css">
+	.field {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+</style>

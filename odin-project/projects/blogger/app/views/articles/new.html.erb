@@ -2,7 +2,9 @@
 <%= render 'form' %>
 
 <% if params[:tag].present? %>
-	<%= link_to 'Back', tag_path(params[:tag_id]), class: 'back' %>
+	<div id="back">
+		<%= link_to 'back', tag_path(params[:tag_id]), class: 'back' %>
+	</div>
 <% else %>
 	<%= render 'back' %>	
 <% end %>
